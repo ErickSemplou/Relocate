@@ -1,0 +1,340 @@
+@font-face {
+  font-family: "Smith Allison";
+  src: url("../assets/fonts/SmithAllison.otf") format("opentype"), url("../assets/fonts/SmithAllison.ttf") format("truetype");
+}
+/* VARIABLES */
+/* MIXINS */
+/* ALL */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  max-width: 1920px;
+}
+
+img {
+  vertical-align: top;
+}
+
+/* BODY */
+body {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+/* CONTAINER */
+[class*=__container] {
+  max-width: 1440px;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin: 0 auto;
+}
+
+/* WRAPPER */
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* MAIN */
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  height: 82px;
+  padding: 0 100px;
+}
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.header__logo {
+  position: relative;
+  height: 82px;
+}
+.header__logo-style {
+  font-family: "Smith Allison", sans-serif;
+  font-size: 82px;
+  color: #0CA296;
+  position: absolute;
+  top: -30%;
+}
+
+/* NAV */
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nav__link {
+  display: block;
+  margin-left: 32px;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #000000;
+  position: relative;
+}
+.nav__link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000000;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+.nav__link:hover::before {
+  width: 100%;
+}
+
+/* BURGER */
+.nav__toggle {
+  display: none;
+  width: 21px;
+  font-size: 0;
+  color: transparent;
+  border: 0;
+  background: none;
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  cursor: pointer;
+  z-index: 1;
+}
+.nav__toggle .nav__toggle-item {
+  display: block;
+  width: 21px;
+  height: 2px;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -webkit-transition: linear 0.5s;
+  transition: linear 0.5s;
+}
+.nav__toggle .nav__toggle-item:before, .nav__toggle .nav__toggle-item:after {
+  content: "";
+  height: 2px;
+  background-color: #000000;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+.nav__toggle .nav__toggle-item:before {
+  width: 21px;
+  top: -7px;
+}
+.nav__toggle .nav__toggle-item:after {
+  width: 21px;
+  bottom: -7px;
+}
+
+.nav__toggle.active .nav__toggle-item {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: linear 0.5s;
+  transition: linear 0.5s;
+}
+
+/* INTRO */
+.intro {
+  max-width: 100%;
+  min-height: 812px;
+  background-image: url(../img/intro/intro_bg.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding: 0 68px 0 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+}
+.intro__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.intro__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+}
+.intro__subtitle {
+  font-family: "Smith Allison", sans-serif;
+  font-weight: 400;
+  font-size: 341.096px;
+  line-height: 82.8%;
+  color: #FFC700;
+  margin-bottom: 25px;
+}
+.intro__title {
+  font-size: 300px;
+  font-weight: 900;
+  line-height: 76%;
+  color: #FFFFFF;
+}
+.intro__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.intro__scroll {
+  width: 48px;
+  height: 48px;
+  border: 1px dashed #FFFFFF;
+  border-radius: 50%;
+  opacity: 0.4;
+  position: relative;
+}
+.intro__scroll::before {
+  content: "";
+  width: 57px;
+  height: 31.5px;
+  background-image: url(../img/intro/icon/left-arrow-key%201.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* MEDIA 1280px */
+@media screen and (max-width: 1280px) {
+  /* HEADER */
+  .header {
+    padding: 0 80px;
+  }
+  /* INTRO */
+  .intro {
+    min-height: 100vh;
+    padding: 0 60px 0 80px;
+  }
+  .intro__subtitle {
+    font-size: 260px;
+  }
+  .intro__title {
+    font-size: 220px;
+    font-weight: 700;
+  }
+}
+/* MEDIA 820 */
+@media screen and (max-width: 820px) {
+  /* HEADER*/
+  .header {
+    height: 52px;
+    padding: 0 70px;
+  }
+  .header__logo-style {
+    top: -50%;
+  }
+  /* NAV */
+  .nav {
+    display: none;
+  }
+  /* BURGER */
+  .nav__toggle {
+    display: block;
+    top: 30px;
+  }
+  /* INTRO */
+  .intro {
+    padding: 0 40px 0 60px;
+  }
+  .intro__subtitle {
+    font-size: 180px;
+  }
+  .intro__title {
+    font-size: 140px;
+    font-weight: 600;
+  }
+}
+/* MEDIA 766 */
+@media screen and (max-width: 766px) {
+  /* HEADER */
+  .header {
+    padding: 0 60px;
+  }
+  /* INTRO */
+  .intro {
+    padding: 0 28px 0 35px;
+  }
+  .intro__subtitle {
+    font-size: 120px;
+  }
+  .intro__title {
+    font-size: 100px;
+    font-weight: 600;
+  }
+}
+/* MEDIA 420 */
+@media screen and (max-width: 420px) {
+  /* HEADER */
+  .header {
+    padding: 0 30px;
+  }
+  /* INTRO */
+  .intro {
+    padding: 0 10px 0 10px;
+  }
+  .intro__subtitle {
+    font-size: 80px;
+  }
+  .intro__title {
+    font-size: 50px;
+    font-weight: 400;
+  }
+}
