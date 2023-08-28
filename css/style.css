@@ -408,11 +408,18 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.more__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-.more__heading {
   text-align: center;
 }
 .more__subtitle {
@@ -446,6 +453,80 @@ body {
   font-weight: 400;
   line-height: 33px;
   color: #565656;
+}
+.more__card {
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(342px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(345px, 1fr));
+  margin: 65px 0 16px;
+}
+.more__item {
+  position: relative;
+  border-radius: 10px;
+  position: relative;
+}
+.more__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+.more__item-1 {
+  -ms-grid-column-span: 1;
+  grid-column: span 1;
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+.more__item-4 {
+  -ms-grid-column-span: 2;
+  grid-column: span 2;
+}
+.more__pictures {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.more__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 320px;
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+.more__text-first {
+  bottom: 45%;
+}
+.more__name {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  color: #FFFFFF;
+  text-align: center;
+}
+.more__city {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 
 /* MEDIA 1280px */
@@ -496,6 +577,25 @@ body {
     line-height: 81px;
   }
   .destinations__paragraph {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  /* MORE */
+  .more__container {
+    max-width: 1020px;
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+  .more__subtitle {
+    font-size: 175px;
+    line-height: 136px;
+  }
+  .more__title {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 81px;
+  }
+  .more__paragraph {
     font-size: 22px;
     line-height: 22px;
   }
@@ -576,6 +676,40 @@ body {
   .destinations__card-item {
     max-width: 280px;
     max-height: 443px;
+  }
+  /* MORE */
+  .more__container {
+    max-width: 800px;
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+  .more__heading {
+    margin-top: -16px;
+  }
+  .more__subtitle {
+    font-size: 135px;
+    line-height: 96px;
+  }
+  .more__title {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 61px;
+  }
+  .more__paragraph {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .more__card {
+    margin-top: 35px;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .more__item-1 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .more__item-4 {
+    grid-column: auto;
   }
 }
 /* MEDIA 766 */
