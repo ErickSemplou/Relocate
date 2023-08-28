@@ -336,16 +336,17 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 65px 0 16px;
-  gap: 12px;
+  gap: 10px;
 }
 .destinations__card-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-      -ms-flex: 1 auto 310px;
-          flex: 1 auto 310px;
-  max-width: 100%;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  max-width: 300px;
   height: auto;
   border-radius: 10px;
   overflow: hidden;
@@ -358,8 +359,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgb(0, 0, 0)), to(rgb(0, 0, 0)));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0));
 }
 .destinations__pictures {
   display: block;
@@ -393,8 +394,58 @@ body {
   font-family: "Bricolage Grotesque", sans-serif;
   font-size: 14px;
   font-weight: 500;
+  text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+
+/* MORE */
+.more__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.more__heading {
+  text-align: center;
+}
+.more__subtitle {
+  font-family: "Smith Allison", sans-serif;
+  font-size: 200px;
+  font-weight: 400;
+  line-height: 166px;
+  letter-spacing: 0em;
+  color: #0CA296;
+}
+.more__title {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 101px;
+  letter-spacing: 0em;
+  color: #000000;
+}
+.more__line {
+  width: 16px;
+  height: 10px;
+  border: 20px;
+  border-radius: 30%;
+  background-color: #CBE7E4;
+  margin: 0 auto 12px;
+}
+.more__paragraph {
+  max-width: 972px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 33px;
+  color: #565656;
 }
 
 /* MEDIA 1280px */
@@ -431,6 +482,7 @@ body {
   }
   /* DESTINATIONS */
   .destinations__container {
+    max-width: 1020px;
     padding-left: 55px;
     padding-right: 55px;
   }
@@ -498,8 +550,9 @@ body {
   }
   /* DESTINATIONS */
   .destinations__container {
-    padding-left: 35px;
-    padding-right: 35px;
+    max-width: 800px;
+    padding-left: 33px;
+    padding-right: 33px;
   }
   .destinations__heading {
     margin-top: -16px;
@@ -516,6 +569,13 @@ body {
   .destinations__paragraph {
     font-size: 18px;
     line-height: 22px;
+  }
+  .destinations__card {
+    margin-top: 35px;
+  }
+  .destinations__card-item {
+    max-width: 280px;
+    max-height: 443px;
   }
 }
 /* MEDIA 766 */
@@ -542,5 +602,18 @@ body {
   /* INTRO */
   .intro {
     padding: 0 10px 0 10px;
+  }
+  /* DESTINATIONS */
+  .destinations__container {
+    max-width: 420px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .destinations__inner {
+    gap: 12px;
+  }
+  .destinations__card-item {
+    max-width: 220px;
+    max-height: 380px;
   }
 }
