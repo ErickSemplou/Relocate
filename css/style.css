@@ -21,7 +21,7 @@
 html,
 body {
   height: 100%;
-  max-width: 1920px;
+  max-width: 1440px;
 }
 
 img {
@@ -183,7 +183,7 @@ body {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/intro/intro_bg.png);
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/intro/intro_bg.png);
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: cover;
   padding: 0 68px 0 90px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -400,6 +400,9 @@ body {
 }
 
 /* MORE */
+.more {
+  background-color: #F5FFFE;
+}
 .more__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -529,6 +532,82 @@ body {
   color: #FFFFFF;
 }
 
+/* FOOTER */
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer__background {
+  width: 100%;
+  min-height: 523px;
+  background-image: url(../img/footer/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer__nav {
+  background-color: #003531;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 36px;
+  padding: 0 77px 45px;
+  margin-top: -8px;
+}
+.footer__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 24px;
+}
+.footer__marks {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #D0D0D0;
+  margin-bottom: 16px;
+}
+.footer__links {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  gap: 23px;
+}
+.footer__icon {
+  display: block;
+  min-width: 27px;
+}
+
 /* MEDIA 1280px */
 @media screen and (max-width: 1280px) {
   /* HEADER */
@@ -613,6 +692,20 @@ body {
   /* NAV */
   .nav {
     display: none;
+  }
+  .nav__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .nav.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   /* BURGER */
   .nav__toggle {
@@ -701,15 +794,29 @@ body {
   }
   .more__card {
     margin-top: 35px;
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   .more__item-1 {
-    grid-column: auto;
-    grid-row: auto;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
   }
   .more__item-4 {
-    grid-column: auto;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .more__pictures {
+    height: 345px;
+  }
+  /* FOOTER */
+  .footer__background {
+    min-height: 323px;
+  }
+  .footer__nav {
+    padding-left: 36px;
+    padding-right: 36px;
   }
 }
 /* MEDIA 766 */
@@ -728,6 +835,27 @@ body {
   .intro__title {
     font-size: 110px;
     font-weight: 600;
+  }
+  /* FOOTER */
+  .footer__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .footer__contacts {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    text-align: center;
+  }
+  .footer__social {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 /* MEDIA 420 */
@@ -749,5 +877,9 @@ body {
   .destinations__card-item {
     max-width: 220px;
     max-height: 380px;
+  }
+  /* FOOTER */
+  .footer__background {
+    min-height: 153px;
   }
 }

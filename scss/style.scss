@@ -13,6 +13,8 @@ $bricolageFonts: 'Bricolage Grotesque', sans-serif;
 $mainColor: #0CA296;
 $titleColor: #FFC700;
 $titleColorOpacity: #FFD600;
+$footerColor: #003531;
+
 
 
 
@@ -67,6 +69,29 @@ $titleColorOpacity: #FFD600;
     color: #FFFFFF;
 }
 
+@mixin footerTitleMark {
+    font-family: $bricolageFonts;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 25px;
+
+    text-transform: uppercase;
+
+    color: #D0D0D0;
+
+}
+
+@mixin footerLinksMenu {
+    font-family: $bricolageFonts;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+
+    text-decoration: none;
+
+    color: #FFFFFF;
+}
+
 /* ALL */
 * {
     padding: 0;
@@ -84,7 +109,7 @@ $titleColorOpacity: #FFD600;
 html,
 body {
     height: 100%;
-    max-width: 1920px;
+    max-width: 1440px;
 }
 
 img {
@@ -267,7 +292,7 @@ body {
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/intro/intro_bg.png);
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
 
     padding: 0 68px 0 90px;
 
@@ -473,6 +498,7 @@ body {
 
 /* MORE */
 .more {
+    background-color: #F5FFFE;
 
     &__inner {
         display: flex;
@@ -592,7 +618,69 @@ body {
 }
 
 
+/* FOOTER */
+.footer {
 
+    &__inner {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__background {
+        width: 100%;
+        min-height: 523px;
+
+        background-image: url(../img/footer/bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__nav {
+        background-color: $footerColor;
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 36px;
+
+        padding: 0 77px 45px;
+        margin-top: -8px;
+
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 24px;
+    }
+
+    &__marks {
+        @include footerTitleMark;
+
+        margin-bottom: 16px;
+    }
+
+    &__links {
+        @include footerLinksMenu;
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        gap: 23px;
+    }
+
+    &__icon {
+        display: block;
+
+        min-width: 27px;
+    }
+
+
+}
 
 
 
@@ -724,6 +812,15 @@ body {
     /* NAV */
     .nav {
         display: none;
+
+        &__link {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .nav.active {
+        display: flex;
     }
 
     /* BURGER */
@@ -834,20 +931,39 @@ body {
         &__card {
             margin-top: 35px;
 
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
         }
 
         &__item-1 {
-            grid-column: auto;
-            grid-row: auto;
+            grid-column: 1;
+            grid-row: 1;
         }
 
         &__item-4 {
-            grid-column: auto;
+            grid-column: 1;
+        }
+
+        &__pictures {
+            height: 345px;
         }
 
 
     }
+
+    /* FOOTER */
+    .footer {
+
+        &__background {
+            min-height: 323px;
+        }
+
+        &__nav {
+            padding-left: 36px;
+            padding-right: 36px;
+        }
+
+    }
+
 }
 
 
@@ -871,6 +987,26 @@ body {
         &__title {
             font-size: 110px;
             font-weight: 600;
+        }
+    }
+
+    /* FOOTER */
+    .footer {
+
+        &__nav {
+            flex-direction: column;
+
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        &__contacts {
+            align-self: center;
+            text-align: center;
+        }
+
+        &__social {
+            flex-direction: row;
         }
     }
 
@@ -908,6 +1044,14 @@ body {
         &__card-item {
             max-width: 220px;
             max-height: 380px;
+        }
+    }
+
+     /* FOOTER */
+    .footer {
+
+        &__background {
+            min-height: 153px;
         }
     }
 
