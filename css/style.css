@@ -91,6 +91,8 @@ body {
   color: #0CA296;
   position: absolute;
   top: -30%;
+  -webkit-transform: translate(0, 30%);
+          transform: translate(0, 30%);
 }
 
 /* NAV */
