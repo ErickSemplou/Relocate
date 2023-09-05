@@ -19,7 +19,7 @@
         <div class="header__inner">
 
             <!-- Logo -->
-            <div class="header__logo">
+            <div class="header__logo" id="logo">
                 <div class="header__logo-style">
                     relocate
                 </div>
@@ -27,10 +27,10 @@
 
             <!-- Navigation -->
             <nav class="nav" id="nav">
-                <a href="#" class="nav__link">Destinations</a>
+                <a href="#" data-scroll="#destinations" class="nav__link">Destinations</a>
                 <a href="#" class="nav__link">Deals</a>
-                <a href="#" class="nav__link">Explore</a>
-                <a href="#" class="nav__link">Resources</a>
+                <a href="#" class="nav__link" data-scroll="#more">Explore</a>
+                <a href="#" data-scroll="#resources" class="nav__link">Resources</a>
             </nav>
 
             <!-- Burger -->
@@ -57,7 +57,7 @@
                 </div>
 
                 <!-- Button -->
-                <div class="intro__button">
+                <div class="intro__button" id="button">
                     <button class="intro__scroll">
                     </button>
                     <p class="intro__scroll-txt">
@@ -73,7 +73,7 @@
 
 
         <!-- DESTINATIONS -->
-        <section class="destinations">
+        <section class="destinations" id="destinations">
             <div class="destinations__container">
                 <div class="destinations__inner">
 
@@ -147,7 +147,7 @@
 
 
         <!-- MORE -->
-        <section class="more">
+        <section class="more" id="more">
             <div class="more__container">
                 <div class="more__inner">
 
@@ -218,7 +218,7 @@
 
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" id="resources">
         <div class="footer__inner">
 
             <!-- Background -->

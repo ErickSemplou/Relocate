@@ -177,9 +177,16 @@ body {
 
         position: absolute;
         top: -30%;
-
-        transform: translate(0, 30%);
     }
+}
+.header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: #FFFFFF;
+
+    z-index: 1000;
 }
 
 
@@ -814,10 +821,32 @@ body {
     /* NAV */
     .nav {
         display: none;
+        flex-direction: column;
+        justify-content: space-between;
+
+        width: 120%;
+        height: auto;
+
+        position: absolute;
+        top: 100%;
+        left: -10px;
+        right: -10p;
+
+        margin: -30px -30px 0;
+
+        background: linear-gradient(180deg, #00BEAC 43.53%, rgba(0, 190, 172, 0) 100%);
+
 
         &__link {
-            display: flex;
-            flex-direction: column;
+            padding: 15px 15px;
+            margin: 0 auto;
+
+            color: #FFFFFF;
+
+            &::before {
+                background-color: #FFFFFF;
+            }
+
         }
     }
 
@@ -947,6 +976,10 @@ body {
 
         &__pictures {
             height: 345px;
+        }
+
+        &__text-first {
+            bottom: 20%;
         }
 
 
