@@ -92,6 +92,12 @@ $footerColor: #003531;
     color: #FFFFFF;
 }
 
+@mixin transitionColorHover {
+    color: $titleColor;
+
+    transition: color .3s ease;
+}
+
 /* ALL */
 * {
     padding: 0;
@@ -167,6 +173,8 @@ body {
     &__logo {
         position: relative;
         height: 82px;
+
+        cursor: pointer;
     }
 
     &__logo-style {
@@ -360,6 +368,10 @@ body {
 
         background-color: rgba(255, 255, 255, 0.4);
 
+        cursor: pointer;
+
+        transition: border-color .3s ease;
+
         position: relative;
 
         &::before {
@@ -378,9 +390,13 @@ body {
 
             position: absolute;
             top: 15%;
-            left: 50%;
+            left: 47%;
 
             transform: translate(-50%, -50%);
+        }
+
+        &:hover {
+            border: 3px solid $titleColor;
         }
     }
 
@@ -463,6 +479,9 @@ body {
 
         position: relative;
 
+        opacity: 1;
+        transition: opacity 0.7s ease;
+
         &::before {
             content: "";
             position: absolute;
@@ -471,6 +490,14 @@ body {
             width: 100%;
             height: 100%;
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+        }
+
+        &:hover .destinations__name {
+            @include transitionColorHover;
+        }
+
+        &:hover .destinations__city {
+            @include transitionColorHover;
         }
 
     }
@@ -491,7 +518,8 @@ body {
         left: 50%;
         bottom: 20%;
 
-        transform: translate(-50%, 0)
+        transform: translate(-50%, 0);
+
     }
 
     &__name {
@@ -502,6 +530,9 @@ body {
         @include subtitleCardDestinations;
     }
 
+}
+.destinations__card-item.hidden {
+  opacity: .3;
 }
 
 
@@ -565,6 +596,8 @@ body {
 
         border-radius: 10px;
 
+        transition: opacity 0.7s ease;
+
         position: relative;
 
         &::before {
@@ -575,6 +608,14 @@ body {
             width: 100%;
             height: 100%;
             background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+        }
+
+        &:hover .more__name {
+            @include transitionColorHover;
+        }
+
+        &:hover .more__city {
+            @include transitionColorHover;
         }
     }
 
@@ -624,6 +665,9 @@ body {
     &__city {
         @include subtitleCardDestinations;
     }
+}
+.more__item.hidden {
+    opacity: .3;
 }
 
 

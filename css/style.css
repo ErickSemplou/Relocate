@@ -84,6 +84,7 @@ body {
 .header__logo {
   position: relative;
   height: 82px;
+  cursor: pointer;
 }
 .header__logo-style {
   font-family: "Smith Allison", sans-serif;
@@ -252,6 +253,9 @@ body {
   border: 1px dashed #FFFFFF;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
   position: relative;
 }
 .intro__scroll::before {
@@ -265,9 +269,12 @@ body {
   color: #FFFFFF;
   position: absolute;
   top: 15%;
-  left: 50%;
+  left: 47%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+.intro__scroll:hover {
+  border: 3px solid #FFC700;
 }
 .intro__scroll-txt {
   display: -webkit-box;
@@ -359,6 +366,9 @@ body {
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  opacity: 1;
+  -webkit-transition: opacity 0.7s ease;
+  transition: opacity 0.7s ease;
 }
 .destinations__card-item::before {
   content: "";
@@ -369,6 +379,16 @@ body {
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgb(0, 0, 0)), to(rgb(0, 0, 0)));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0));
+}
+.destinations__card-item:hover .destinations__name {
+  color: #FFC700;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.destinations__card-item:hover .destinations__city {
+  color: #FFC700;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 .destinations__pictures {
   display: block;
@@ -405,6 +425,10 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+
+.destinations__card-item.hidden {
+  opacity: 0.3;
 }
 
 /* MORE */
@@ -476,6 +500,8 @@ body {
 .more__item {
   position: relative;
   border-radius: 10px;
+  -webkit-transition: opacity 0.7s ease;
+  transition: opacity 0.7s ease;
   position: relative;
 }
 .more__item::before {
@@ -487,6 +513,16 @@ body {
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6)));
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+}
+.more__item:hover .more__name {
+  color: #FFC700;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.more__item:hover .more__city {
+  color: #FFC700;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 .more__item-1 {
   -ms-grid-column-span: 1;
@@ -538,6 +574,10 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+
+.more__item.hidden {
+  opacity: 0.3;
 }
 
 /* FOOTER */

@@ -160,6 +160,53 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+/* HIDEN CARD */
+document.addEventListener('DOMContentLoaded', function() {
+  let destinationsCard = document.querySelector('.destinations__card');
+  let cardItems = destinationsCard.querySelectorAll('.destinations__card-item');
+
+  cardItems.forEach(function(cardItem) {
+    cardItem.addEventListener('mouseover', function() {
+      cardItems.forEach(function(item) {
+        if (item !== cardItem) {
+          item.classList.add('hidden');
+        }
+      });
+    });
+
+    cardItem.addEventListener('mouseout', function() {
+      cardItems.forEach(function(item) {
+        item.classList.remove('hidden');
+      });
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  let destinationsCard = document.querySelector('.more__card');
+  let cardItems = destinationsCard.querySelectorAll('.more__item');
+
+  cardItems.forEach(function(cardItem) {
+    cardItem.addEventListener('mouseover', function() {
+      cardItems.forEach(function(item) {
+        if (item !== cardItem) {
+          item.classList.add('hidden');
+        }
+      });
+    });
+
+    cardItem.addEventListener('mouseout', function() {
+      cardItems.forEach(function(item) {
+        item.classList.remove('hidden');
+      });
+    });
+  });
+});
+
+
+
+
+
 
 
 
