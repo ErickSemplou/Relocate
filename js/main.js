@@ -183,6 +183,29 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+  let destinationsCard = document.querySelector('.destinations__card');
+  let cardItems = destinationsCard.querySelectorAll('.destinations__card-item');
+
+  cardItems.forEach(function(cardItem) {
+    cardItem.addEventListener('touchstart', function() {
+      cardItems.forEach(function(item) {
+        if (item !== cardItem) {
+          item.classList.add('hidden');
+        }
+      });
+    });
+
+    cardItem.addEventListener('touchend', function() {
+      cardItems.forEach(function(item) {
+        item.classList.remove('hidden');
+      });
+    });
+  });
+});
+
+/* mobile */
+
+document.addEventListener('DOMContentLoaded', function() {
   let destinationsCard = document.querySelector('.more__card');
   let cardItems = destinationsCard.querySelectorAll('.more__item');
 
@@ -202,6 +225,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  let destinationsCard = document.querySelector('.more__card');
+  let cardItems = destinationsCard.querySelectorAll('.more__item');
+
+  cardItems.forEach(function(cardItem) {
+    cardItem.addEventListener('touchstart', function() {
+      cardItems.forEach(function(item) {
+        if (item !== cardItem) {
+          item.classList.add('hidden');
+        }
+      });
+    });
+
+    cardItem.addEventListener('touchend', function() {
+      cardItems.forEach(function(item) {
+        item.classList.remove('hidden');
+      });
+    });
+  });
+});
+
+
 
 
 
