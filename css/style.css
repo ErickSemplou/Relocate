@@ -731,7 +731,7 @@ body {
 @media screen and (max-width: 866px) {
   /* HEADER*/
   .header {
-    height: 52px;
+    height: 62px;
     padding: 0 40px;
   }
   .header__logo-style {
